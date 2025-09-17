@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* topbtn.css */
+
+.topbtn {position: fixed; bottom: 5%; right: 1%; display: none;}
+.topbtn > button {border: none; padding: 10px; background: transparent; cursor: pointer;}
+.topbtn > button > i {font-size: 1.8rem;}
+.topbtn > button:hover > i {color: #888;}

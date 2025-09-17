@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* main.css */
+
+/* 메인 영역 */
+main {width: 100%; overflow: hidden;}
+h2 {color: #696545;}
+h3 {color: #958e5c;}
+
+/* 메인 영역-슬라이드 */
+#slide {position: relative;}
+.slide_wrapper {width: 100%; overflow: hidden; height: 90vh; z-index: 1;}
+.slide_inner {width: 100%;}
+.slide_inner .slide_imgs {width: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;}
+.slide_inner a {display: block; width: 100%;}
+.slide_inner img {width: 100%; filter: contrast(0.5) blur(2px) opacity(0.7); object-fit: cover; height: 90vh;}
+.slide_imgs.active {opacity: 1; z-index: 1;}
+
+#slide_tit {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1;}
+#slide_tit > h2 {font-size: 24px; line-height: 62px; margin-bottom: 15px; color: #696545;}
+#slide_tit > p {line-height: 30px;}
+
+/* 메인 영역-섹션 공통 */
+.des {padding: .8%; box-sizing: border-box;}
+.des > h2 {padding-top: 35px; text-indent: 5px; font-size: 18px; margin: 6px 0;}
+.des > p {text-indent: 10px; font-size: 14px;}
+.des > article {margin: 20px auto; width: 100%;}
+.des > article > h3 {display: none;}
+.des > article .list_card {width: 100%; margin: 4px; box-sizing: border-box; text-align: center; padding: 5px; border-radius: 5px;}
+.des > article .list_card {background: #f4f4f4;}
+.des > article > .list_card picture {width: 100%; display: block; overflow: hidden;}
+.des > article > .list_card img {width: 100%; transition: all 0.5s;}
+
+.des > article > .list_card:hover img {transform: scale(1.1);}
+
+.des > .cardwrap {display: flex; flex-wrap: wrap;}
+.des > .cardwrap > .list_card {width: calc(98%/3);} /* 마진값 감안하여 100%로 계산 불가 */
+.des > .cardwrap > .list_card > a {display: block; width: 100%; box-sizing: border-box;}
+.des .list_card p:first-of-type {line-height: 2rem; font-weight: bold; margin-top: 6px;}
+
+.list_card .prf_info {margin: 2px auto 5px; font-size: 14px;}
+.list_card .prf_hlit {color: #940f0f;}
+
+.des > .cardwrap > .list_card > .card_link {font-size: 0.9rem; margin: 14px auto 5px; text-decoration: underline; background: #a6a6f4; padding: 4px 10px; width: 50%; border-radius: 50px; transition: all 0.2s;}
+.des > .cardwrap > .list_card > .card_link:hover {background: #7e7eb8; color: #efefef;}
+
+.des > .prf_card > h3 {display: block; width: 100%; font-size: 16px; text-indent: 8px;}
+
+/* 메인 영역 - 졸업작품 */
+.des > .gd_link {margin: 10px auto; display: flex;}
+.des > .gd_link > li {margin: 5px 15px; background: #e4db83; border-radius: 15px; text-align: center; width: 100%; padding: 8px 0;}
+.des > .gd_link > li > a {display: block; width: 100%;}
+.des > .gd_link > li:first-child {background: #c9cd45;}
+.des > .gd_link > li:hover {background: #f3ecb6;}
+
+/* 메인 영역 - 편집 */
+.edit_list_card img {width: 100%; object-fit: cover;}
+
+/* 메인 영역 - 영상 */
+#video {position: relative;}
+.des > .cardwrap_full {overflow: hidden;}
+.cardwrap_full::after {display: block; content: ''; clear: both;}
+.des > .cardwrap_full .list_cardwrap {width: 700%; display: flex; flex-direction: row; height: 95vh;}
+.video_list_card {width: 100%; height: 100%;}
+.video_list_card iframe {width: 85%; height: 70%;}
+
+.btnwrap > span {background: #fff; border-radius: 50%; border: 1px solid #333; cursor: pointer; margin: 0 6px;}
+.btnwrap > span:hover {background: #eee;}
+
+/* 메인 영역 - 사진 */
+.list_card .pic_info {margin: 2px auto;}
+.list_card .pic_place {margin-top: 5px; color: #565656;}
+
+/* 반응형 사이즈 */
+/* Tablet Size */
+@media screen and (max-width: 1024px) and (min-width: 794px) {
+  .des > .cardwrap > .list_card {width: calc(98%/2);}
+}
+
+/* Mobile Size */
+@media screen and (max-width: 793px) {
+  .des > .cardwrap > .list_card {width: 100%;}
+}
