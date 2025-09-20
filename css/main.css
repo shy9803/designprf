@@ -33,7 +33,7 @@ h3 {color: #958e5c;}
 .des > article > .list_card:hover img {transform: scale(1.1);}
 
 .des > .cardwrap {display: flex; flex-wrap: wrap;}
-.des > .cardwrap > .list_card {width: calc(98%/3);} /* 마진값 감안하여 100%로 계산 불가 */
+.des > .cardwrap > .list_card {width: calc(97.5%/3);} /* 마진값 감안하여 100%로 계산 불가 */
 .des > .cardwrap > .list_card > a {display: block; width: 100%; box-sizing: border-box;}
 .des .list_card p:first-of-type {line-height: 2rem; font-weight: bold; margin-top: 6px;}
 
@@ -73,7 +73,7 @@ h3 {color: #958e5c;}
 /* 반응형 사이즈 */
 /* Tablet Size */
 @media screen and (max-width: 1024px) and (min-width: 794px) {
-  .des > .cardwrap > .list_card {width: calc(98%/2);}
+  .des > .cardwrap > .list_card {width: calc(97.5%/2);}
 }
 
 /* Mobile Size */
